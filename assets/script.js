@@ -15,3 +15,9 @@ $(".btn").on("click", function () {
   console.log(buttonid, timeBlock, userinput);
   localStorage.setItem(timeBlock, userinput);
 });
+
+for (let index = 9; index < 18; index++) {
+  const element = localStorage.getItem(index);
+  console.log(element);
+  $("#" + index + "-userinput").val(element);
+}

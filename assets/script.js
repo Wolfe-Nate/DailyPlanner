@@ -10,5 +10,8 @@ $("#currentDay").text(today);
 
 $(".btn").on("click", function () {
   var buttonid = $(this).attr("id");
-  console.log(buttonid);
+  var timeBlock = buttonid.split("-")[0];
+  var userinput = $("#" + timeBlock + "-userinput").val();
+  console.log(buttonid, timeBlock, userinput);
+  localStorage.setItem(timeBlock, userinput);
 });
